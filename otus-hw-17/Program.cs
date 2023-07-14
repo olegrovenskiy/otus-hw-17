@@ -25,7 +25,6 @@ Console.WriteLine(test.Number);
 
 
 
-
 Console.ReadKey();
 
 // преобразующий входной тип в число
@@ -47,8 +46,7 @@ float ToNumber <T> (T t) where T : class
 }
 
 
-
-
+// Метод расширения поиска Максимального
 public static class CollectionExtention
 {
 
@@ -72,8 +70,7 @@ public static class CollectionExtention
     }
 }
 
-
-
+// Класс для тестирования
 public class TestClass
 {
     public int Number { get; set; }
