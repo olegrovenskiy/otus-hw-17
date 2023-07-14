@@ -32,12 +32,12 @@ Console.ReadKey();
 static void FileEventHandler(object sender, FileArgs e)
 {
     Console.WriteLine($"File found {e.FileName}");
+    if (e.FileName.Contains("exe"))
+     Console.WriteLine("One file *.exe"); 
 }
 
 public class FileInDirectory
 {
-    //  public delegate void EventHandler(object sender, EventArgs e);
-
     public delegate void EventHandler (object sender, FileArgs e);
 
     public event EventHandler FileFound;
