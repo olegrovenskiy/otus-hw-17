@@ -5,6 +5,8 @@ using System.Security.Cryptography.X509Certificates;
 
 Console.WriteLine("Hello, World!");
 
+//         Тестирование задания 1
+
 
 // для тестовой коллекции
 var x1 = new TestClass(2);
@@ -19,11 +21,21 @@ var test = TestCollection.GetMax<TestClass>(ToNumber);
 
 Console.WriteLine(test.Number);
 
+// ----------------------------
+// Тестирование задания 2, 3, 4
+
+
+
+
+
+
 
 
 Console.ReadKey();
 
-// преобразующий входной тип в число
+
+
+// Произвольный метод преобразующий входной тип в число
 float ToNumber <T> (T t) where T : class
 {
     Type myType = typeof(T);
@@ -37,38 +49,6 @@ float ToNumber <T> (T t) where T : class
     return num;
 
 }
-
-// Метод расширения поиска Максимального
-public static class CollectionExtention
-{
-    public static T GetMax<T>(this IEnumerable e, Func<T, float> getParameter) where T : class
-    {
-        T? MaxT = default(T);
-        float f = float.MinValue;
-
-        foreach (T i in e)
-        {
-            var d = getParameter(i);
-            if (d > f)
-            {
-                MaxT = i;
-                f = d;
-            }
-        }
-        return MaxT;
-    }
-}
-
-// Класс для тестирования
-public class TestClass
-{
-    public int Number { get; set; }
-    public TestClass(int number)
-    { this.Number = number; }
-}
-
-
-
 
 
 
