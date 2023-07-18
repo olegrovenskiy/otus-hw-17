@@ -25,7 +25,12 @@ Console.WriteLine(test.Number);
 // Тестирование задания 2, 3, 4
 
 
+string dirName = "C:\\Users\\o.rovenskiy\\source\\repos\\otus-hw-17\\otus-hw-17\\otus-hw-17\\bin\\Debug\\net7.0\\";
 
+var test4 = new FileInDirectory(dirName);
+
+
+test4.GetFile();
 
 
 
